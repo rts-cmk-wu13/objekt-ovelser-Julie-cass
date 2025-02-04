@@ -34,3 +34,21 @@ console.log(cat2.family.parent);
 console.log(cat2.family.enemy);
 
 //-----opgave 3-----
+
+let newDiv = document.createElement("div");
+newDiv.textContext = "dette er en ny <div>";
+document.body.append(newDiv);
+
+let students = [
+    {name: "bobby", age: 69, course: "footballer"},
+    {name: "kim", age: 20, course: "designer"},
+    {name: "larsen", age: 49, course: "forfatter"},
+];
+
+let studentListDiv = document.querySelector(".student-list");
+students.forEach(function(student){
+    const studentDiv = document.createElement("div");
+    studentDiv.textContent =
+    student.name + ', alder: ' + student.age + ', uddannelse ' + student.course;
+    console.log(studentDiv);
+})
